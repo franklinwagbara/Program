@@ -26,7 +26,7 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
         return true;
     }
 
-    public async Task<IEnumerable<TEntity>> GetAll()
+    public async Task<IEnumerable<TEntity>?> GetAll()
     {
         return await _context.Set<TEntity>().ToListAsync();
     }
