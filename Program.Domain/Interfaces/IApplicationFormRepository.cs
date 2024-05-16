@@ -2,4 +2,7 @@
 
 namespace Program.Domain.Interfaces;
 
-public interface IApplicationFormRepository: IRepository<ApplicationForm>;
+public interface IApplicationFormRepository: IRepository<ApplicationForm>
+{
+    Task<ApplicationForm> GetByProgramId(Guid ProgramId);
+}
